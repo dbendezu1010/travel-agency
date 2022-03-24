@@ -1,0 +1,141 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tokyo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="has-background-grey-lighter">
+    <section class="hero is-medium is-darker-purple-background">
+        <div class="hero-head">
+          <div class="container">
+            <nav class="navbar" role="navigation" aria-label="main navigation" >
+              <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                  <a href = "index.html" class="navbar-item is-white-color">Home</a>
+                  <a href = "#" class="navbar-item is-white-color">London</a>
+                  <a href = "#" class="navbar-item is-white-color">Singapore</a>
+                </div>
+                <div class = "navbar-end">
+                  <div class = "navbar-item">
+                    <div class = "buttons">
+                      <button class="button is-dark-purple-background is-white-color">Button</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!--HERO-->
+        <section class = "hero is-fullheight-with-navbar hero-has-background is-black-background">
+            <img class ="hero-background hero-is-transparent-black" src = "assets/japan4.jpg">
+            <div class = "hero-body">
+              <div class = "container">
+                <p class = "title is-white-color is-size-1">Tokyo, Japan</p>
+                <p class = "subtitle is-white-color is-size-3">Visit Today</p>
+              </div>
+            </div>
+        </section>
+
+        <section class="section blog-posts is-dark-purple-background">
+            <div class="container">
+              <div class="columns">
+                <div class="column is-10 is-offset-1">
+                  <div class="columns featured-post is-multiline">
+                    <div class="column is-12 post">
+                      <article class="columns featured">
+                        <div class="column is-7 post-img ">
+                          <img src="assets/undraw_city_life_gnpr.svg" class = "image">
+                        </div>
+                        <div class="column is-5 featured-content va">
+                          <div>
+                            <h1 class="title post-title">Tokyo, Japan</h1>
+                            <p class="post-excerpt">Tokyo (東京, Tōkyō) is Japan's capital and the world's most populous metropolis. It is also one of Japan's 47 prefectures, consisting of 23 central city wards and multiple cities, towns and villages west of the city center. The Izu and Ogasawara Islands are also part of Tokyo. Check out this <a href ="https://www.japan-guide.com/e/e2164.html#:~:text=Tokyo%20%28%E6%9D%B1%E4%BA%AC%2C%20T%C5%8Dky%C5%8D%29%20is%20Japan%27s%20capital%20and%20the,and%20Ogasawara%20Islands%20are%20also%20part%20of%20Tokyo." class = "is-orange-color">guide</a> for more information.</p>
+                            <br>
+                            <a href="#" class="button is-blue-background is-orange-color">Read More</a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!--WEATHER-->
+          <section class = "section is-small is-darker-purple-background">
+              <div class = "columns is-vcentered is-mobile is-centered">
+                  <div class = "column is-8 has-text-centered">
+                      <p class = "title">The Weather in Japan is...</p>
+                  </div>
+                  <div class = "column is-4">
+                      <div class = "weather-card box is-light-purple-background">
+                          <h3 class = "city-name">
+                              <span class = "is size-3" id = "city">City Name</span>
+                              <sup id = "city-country">Country</sup>
+                          </h3>
+                          <span class = "city-temp"><span id = "city-temp">00</span><sup>℃</sup></span>
+                          <figure>
+                            <img src="" id="weater-icon">
+                            <!--
+                              <ion-icon name = "cloud-outline" class = "city-icon" id = "weather-icon"></ion-icon>-->
+                              <figcaption id = "city-weather-type">Weather Type</figcaption>
+                          </figure>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+    <!-- Using Vue to populate cards to reduce redundant code -->
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+           cardData: cardsData
+          }
+        })
+    </script>
+
+    <!--FOOTER-->
+    <footer class="footer is-dark-purple-background">
+      <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          Designed by <text class = "is-blue-color"><strong>Diego Bendezu</strong>.</text>
+          The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" class = "is-orange-color">MIT</a>. <br>
+        </p>
+        <div class = "columns is-centered is-vcentered">
+          <div class = "column is-2">
+            <div class = "columns is-centered is-vcentered">
+              <div class = "column is-4">
+                <ion-icon name = "logo-twitter" class = "social-icon"></ion-icon>
+              </div>
+              <div class = "column is-4">
+                <ion-icon name = "logo-facebook" class = "social-icon"></ion-icon>
+              </div>
+                <div class = "column is-4">
+                  <ion-icon name = "logo-tiktok" class = "social-icon"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+    <!--MY JS-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../js/cardsData.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
